@@ -17,6 +17,17 @@
     <filter-name>characterEncodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+  <!--配置spring的监听器,默认只去加载WEB-INF目录下的applicationContext.xml配置文件
+      如果applicationContext.xml在resources目录下,项目发布到tomcat上时将找不到该文件
+  -->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <!--怎么解决?配置该文件的路径-->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:spring/applicationContext.xml</param-value>
+  </context-param>
   <!--1.配置前端控制器-->
   <servlet>
     <servlet-name>dispatcherServlet</servlet-name>
@@ -32,6 +43,7 @@
     <servlet-name>dispatcherServlet</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+
     <!--欢迎页面-->
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
