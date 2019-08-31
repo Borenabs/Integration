@@ -12,7 +12,7 @@ public interface AccountMapper {
     /*
     * 添加
     * */
-    void insert(Account account);
+   void insert(Account account);
     /*
     * 删除
     * */
@@ -20,5 +20,5 @@ public interface AccountMapper {
     /*
     * 修改
     * */
-    void update(Account account);
+//    void update(Account account);
 }

@@ -20,5 +20,5 @@ public interface AccountServiceInf {
     /*
      * 修改
      * */
-    void update(Account account);
+//    void update(Account account);
 }

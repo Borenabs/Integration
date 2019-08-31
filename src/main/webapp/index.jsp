@@ -11,6 +11,7 @@
 	<title>Title</title>
 </head>
 <body>
-	<a href="account/findAll">测试SpringMVC</a>
+	<a href="/account/findAll">测试SpringMVC</a>
+	<a href="insert.jsp">添加</a>
 </body>
 </html>
